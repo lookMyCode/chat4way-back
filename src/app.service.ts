@@ -56,7 +56,7 @@ export class AppService {
       )
       ORDER BY \`messages\`.\`created\` DESC
     `;
-    console.log(q)
+    
     const result: any[] = await this.db.sendQuery(q);
 
     if (!result || ! result.length) return [];
